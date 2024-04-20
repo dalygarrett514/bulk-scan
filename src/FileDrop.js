@@ -57,14 +57,13 @@ const FileDrop = () => {
         };
   
         try {
-          const response = await fetch(`https://thingproxy.freeboard.io/fetch/https://api.yext.com/v2/accounts/me/scan?api_key=${apiKey}&v=20240412`, {
+          const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.yext.com/v2/accounts/me/scan?api_key=${apiKey}&v=20240412`, {
             method: 'POST',
 
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify(requestData),
-            mode: 'no-cors' // Add this line to set the request mode to 'no-cors'
           });
   
           if (!response.ok) {
