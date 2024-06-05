@@ -57,7 +57,7 @@ const FileDrop = () => {
         };
   
         try {
-          const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.yext.com/v2/accounts/me/scan?api_key=${apiKey}&v=20240412`, {
+          const response = await fetch(`https://thingproxy.freeboard.io/fetch/https://api.yext.com/v2/accounts/me/scan?api_key=${apiKey}&v=20240412`, {
             method: 'POST',
 
             headers: {
